@@ -1,6 +1,7 @@
 package org.usfirst.frc.team2374.robot.subsystems;
 
 import org.usfirst.frc.team2374.robot.RobotMap;
+import org.usfirst.frc.team2374.robot.commands.DrivetrainTeleop;
 
 import edu.wpi.first.wpilibj.RobotDrive;
 import edu.wpi.first.wpilibj.Talon;
@@ -26,12 +27,12 @@ public class Drivetrain extends Subsystem {
 		robotDrive = new RobotDrive(masterLeft1, masterLeft2, masterRight1, masterRight2);
 		robotDrive.setSafetyEnabled(false);
 	}
-	
-	// command to be written, setDefaultCommand(new CommandName()) takes a command as an input and sets the default
+
+	// setDefaultCommand(new CommandName()) takes a command as an input and sets the default
 	// command for this subsystem, usually the teleop command that corresponds to this subsystem
 	@Override
 	protected void initDefaultCommand() {
-		//setDefaultCommand();
+		setDefaultCommand(new DrivetrainTeleop());
 	}
 	
 	public void tankDrive(double left, double right) {
