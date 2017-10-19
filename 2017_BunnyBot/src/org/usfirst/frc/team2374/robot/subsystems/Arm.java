@@ -8,7 +8,6 @@ import edu.wpi.first.wpilibj.DoubleSolenoid.Value;
 import edu.wpi.first.wpilibj.Talon;
 import edu.wpi.first.wpilibj.command.Subsystem;
 
-
 public class Arm extends Subsystem {
 	
 	private Talon talon1, talon2;
