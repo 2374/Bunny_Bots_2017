@@ -7,6 +7,18 @@ package org.usfirst.frc.team2374.robot;
  * floating around.
  */
 public class RobotMap {
+
+	public static int driverJoy = 0;
+	
+	public static int rsLeftAxisY = 1;
+	public static int rsRightAxisY = 5;
+	public static int rsLeftTrigger = 2;
+	public static int rsRightTrigger = 3;
+	public static int rsLeftBumper = 5;
+	public static int rsRightBumper = 6;
+	public static int rsButtonX = 3;
+	public static int rsButtonA = 1;
+	public static int rsButtonY = 4;
 	
 	public static final int TALON_LEFT_1 = 1; // front left mCIM
 	public static final int TALON_LEFT_2 = 2; // back left mCIM
