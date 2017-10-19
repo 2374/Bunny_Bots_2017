@@ -29,4 +29,11 @@ public class RobotMap {
 	public static final int TALON_RIGHT_MASTER_1 = 7; // front right CIM
 	public static final int TALON_RIGHT_MASTER_2 = 8; // back right CIM
 	
+	public static final int TALON_ARM_1 = 9; // first motor for the arm
+	public static final int TALON_ARM_2 = 10; // second motor for the arm
+	public static final int SOLENOID_ARM_1 = 14; // first solenoid for the arm
+	public static final int SOLENOID_ARM_2 = 15; // second solenoid for the arm
+	public static final int SOLENOID_ARM_3 = 16; // third solenoid for the arm
+	public static final int SOLENOID_ARM_4 = 17; // fourth solenoid for the arm
+	
 }
