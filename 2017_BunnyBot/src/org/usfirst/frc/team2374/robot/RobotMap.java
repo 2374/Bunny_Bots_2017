@@ -17,4 +17,8 @@ public class RobotMap {
 	public static final int TALON_RIGHT_MASTER_1 = 7; // front right CIM
 	public static final int TALON_RIGHT_MASTER_2 = 8; // back right CIM
 	
+	public static final int CATAPULT_TALON_1 = 11;
+	public static final int CATAPULT_SOLENOID_2 = 12;
+	public static final int CATAPULT_SOLENOID_3 = 13;
+	
 }
