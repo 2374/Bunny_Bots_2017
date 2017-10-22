@@ -36,8 +36,8 @@ public class Catapult extends Subsystem {
 		catapult1.setSpeed(0);
 	}
 	
-	public boolean getMotors() {
-		return catapult1.getSpeed() > 0;
+	public double getMotors() {
+		return catapult1.getSpeed();
 	}
 	
 	public void pistonStart() {
