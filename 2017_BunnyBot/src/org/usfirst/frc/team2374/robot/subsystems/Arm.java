@@ -60,8 +60,9 @@ public class Arm extends Subsystem {
 		talon2.setSpeed(0);
 	}
 	
-	public boolean getMotors() {
-		return talon1.getSpeed() != 0 && talon2.getSpeed() != 0;
+	// talon1 and talon2 should have the same speed
+	public double getMotors() {
+		return talon1.getSpeed();
 	}
 
 }
