@@ -15,47 +15,42 @@ public class Catapult extends Subsystem {
 	private DoubleSolenoid solenoid;
 	
 	public Catapult() {
-
 		catapult1 = new Talon(RobotMap.CATAPULT_TALON_1);
 		solenoid = new DoubleSolenoid(RobotMap.CATAPULT_SOLENOID_2, RobotMap.CATAPULT_SOLENOID_3);
-	}
-
-	public void motorsForward(boolean t) {
-		if (t) {
-			catapult1.setSpeed(MOTOR_SPEED);	
-		}
-		else {
-			catapult1.setSpeed(0);
-		}
-	}
-	
-	public void motorsBackward(boolean l) {
-		
-		if (l) {
-			catapult1.setSpeed(-MOTOR_SPEED);	
-		}
-		else {
-			catapult1.setSpeed(0);
-		}
-		
-	}
-	
-	public void piston(boolean a) {
-		
-		if (a) {
-			
-			solenoid.set(Value.kForward);
-		}
-		else {
-			solenoid.set(Value.kReverse);
-		}
-		
 	}
 	
 	@Override
 	protected void initDefaultCommand() {
-		
 			
 	}
+
+	public void motorsForward() {
+		catapult1.setSpeed(MOTOR_SPEED);
+	}
+	
+	public void motorsBackward() {
+		catapult1.setSpeed(-MOTOR_SPEED);
+	}
+	
+	public void motorsStop() {
+		catapult1.setSpeed(0);
+	}
+	
+	public boolean getMotors() {
+		return catapult1.getSpeed() > 0;
+	}
+	
+	public void pistonStart() {
+		solenoid.set(Value.kForward);
+	}
+	
+	public void pistonStop() {
+		solenoid.set(Value.kReverse);
+	}
+	
+	public boolean getPiston() {
+		return solenoid.equals(Value.kReverse);
+	}
+	
 
 }
