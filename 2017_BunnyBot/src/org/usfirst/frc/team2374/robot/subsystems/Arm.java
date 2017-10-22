@@ -25,44 +25,43 @@ public class Arm extends Subsystem {
 
 	@Override
 	protected void initDefaultCommand() {
-		// TODO Auto-generated method stub
 		
 	}
 	
 	// moves the pistons in the arm
-	public void pistons(boolean onOff){
-		if(onOff){
-			solenoid1.set(Value.kForward);
-			solenoid2.set(Value.kForward);
-		} 
-		else{
-			solenoid1.set(Value.kReverse);
-			solenoid2.set(Value.kReverse);
-		}
+	public void pistonsStart() {
+		solenoid1.set(Value.kForward);
+		solenoid2.set(Value.kForward);
+	}
+	
+	public void pistonsStop() {
+		solenoid1.set(Value.kReverse);
+		solenoid2.set(Value.kReverse);
+	}
+	
+	public boolean getPistons() {
+		return solenoid1.equals(Value.kForward) && solenoid2.equals(Value.kForward);
 	}
 	
 	// The motors may need to spin in opposite directions ask mechanical later
-	public void motorsForward(boolean onOff) {
-		if(onOff){
-			talon1.setSpeed(MOTOR_SPEED);
-			talon2.setSpeed(MOTOR_SPEED);
-		}
-		else {
-			talon1.setSpeed(0);
-			talon2.setSpeed(0);
-		}
+	public void motorsForward() {
+		talon1.setSpeed(MOTOR_SPEED);
+		talon2.setSpeed(MOTOR_SPEED);
 	}
 	
 	// The motors may need to spin in opposite directions ask mechanical later
-	public void motorsBackwards(boolean onOff) {
-		if(onOff){
-			talon1.setSpeed(-MOTOR_SPEED);
-			talon2.setSpeed(-MOTOR_SPEED);
-		}
-		else {
-			talon1.setSpeed(0);
-			talon2.setSpeed(0);
-		}
+	public void motorsBackwards() {
+		talon1.setSpeed(-MOTOR_SPEED);
+		talon2.setSpeed(-MOTOR_SPEED);
+	}
+	
+	public void motorsStop() {
+		talon1.setSpeed(0);
+		talon2.setSpeed(0);
+	}
+	
+	public boolean getMotors() {
+		return talon1.getSpeed() != 0 && talon2.getSpeed() != 0;
 	}
 
 }
