@@ -2,6 +2,7 @@
 package org.usfirst.frc.team2374.robot.subsystems;
 
 import org.usfirst.frc.team2374.robot.RobotMap;
+import org.usfirst.frc.team2374.robot.commands.ArmTeleop;
 
 import edu.wpi.first.wpilibj.DoubleSolenoid;
 import edu.wpi.first.wpilibj.DoubleSolenoid.Value;
@@ -25,7 +26,7 @@ public class Arm extends Subsystem {
 
 	@Override
 	protected void initDefaultCommand() {
-		
+		setDefaultCommand(new ArmTeleop());
 	}
 	
 	// moves the pistons in the arm
