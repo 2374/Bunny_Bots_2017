@@ -8,6 +8,7 @@ import edu.wpi.first.wpilibj.livewindow.LiveWindow;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
+import org.usfirst.frc.team2374.robot.subsystems.Arm;
 import org.usfirst.frc.team2374.robot.subsystems.Drivetrain;
 
 /**
@@ -20,6 +21,7 @@ import org.usfirst.frc.team2374.robot.subsystems.Drivetrain;
 public class Robot extends IterativeRobot {
 
 	public static Drivetrain drive;
+	public static Arm arm;
 	public static OI oi;
 
 	Command autonomousCommand;
@@ -32,6 +34,7 @@ public class Robot extends IterativeRobot {
 	@Override
 	public void robotInit() {
 		drive = new Drivetrain();
+		arm = new Arm();
 		oi = new OI();
 		// chooser.addDefault("Default Auto", new ExampleCommand());
 		// chooser.addObject("My Auto", new MyAutoCommand());
