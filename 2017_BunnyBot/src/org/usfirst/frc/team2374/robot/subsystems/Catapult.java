@@ -1,6 +1,7 @@
 package org.usfirst.frc.team2374.robot.subsystems;
 
 import org.usfirst.frc.team2374.robot.RobotMap;
+import org.usfirst.frc.team2374.robot.commands.CatapultTeleop;
 
 import edu.wpi.first.wpilibj.DoubleSolenoid;
 import edu.wpi.first.wpilibj.DoubleSolenoid.Value;
@@ -21,7 +22,7 @@ public class Catapult extends Subsystem {
 	
 	@Override
 	protected void initDefaultCommand() {
-			
+		setDefaultCommand(new CatapultTeleop());
 	}
 
 	public void motorsForward() {
