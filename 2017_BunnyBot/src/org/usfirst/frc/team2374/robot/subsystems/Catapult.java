@@ -19,7 +19,7 @@ public class Catapult extends Subsystem {
 		catapult1 = new Talon(RobotMap.CATAPULT_TALON_1);
 		solenoid = new DoubleSolenoid(RobotMap.CATAPULT_SOLENOID_2, RobotMap.CATAPULT_SOLENOID_3);
 	}
-	
+	 
 	@Override
 	protected void initDefaultCommand() {
 		setDefaultCommand(new CatapultTeleop());
