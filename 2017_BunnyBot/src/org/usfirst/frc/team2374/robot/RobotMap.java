@@ -42,5 +42,4 @@ public class RobotMap {
 	public static final int SOLENOID_ARM_3 = 16; // third solenoid for the arm
 	public static final int SOLENOID_ARM_4 = 17; // fourth solenoid for the arm
 
-	
 }
