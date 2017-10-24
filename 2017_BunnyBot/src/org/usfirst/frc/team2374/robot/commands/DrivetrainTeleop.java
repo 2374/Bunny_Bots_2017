@@ -20,7 +20,7 @@ public class DrivetrainTeleop extends Command {
 		// straight forward or straight back
 		double leftTrigger = Robot.oi.getLeftTrigger();
 		double rightTrigger = Robot.oi.getRightTrigger();
-		if (rightTrigger != 0)
+		if (rightTrigger != 0) 
 			Robot.drive.tankDrive(rightTrigger, rightTrigger);
 		else if (leftTrigger != 0)
 			Robot.drive.tankDrive(-leftTrigger, -leftTrigger);

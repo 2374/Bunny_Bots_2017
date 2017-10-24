@@ -19,6 +19,7 @@ public class RobotMap {
 	public static int rsButtonX = 3;
 	public static int rsButtonA = 1;
 	public static int rsButtonY = 4;
+	public static int rsButtonB = 2;
 	
 	public static final int TALON_LEFT_1 = 1; // front left mCIM
 	public static final int TALON_LEFT_2 = 2; // back left mCIM
