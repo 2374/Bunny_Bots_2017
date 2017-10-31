@@ -9,6 +9,7 @@ import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 import org.usfirst.frc.team2374.robot.subsystems.Catapult;
+import org.usfirst.frc.team2374.robot.commands.TimedAuto;
 import org.usfirst.frc.team2374.robot.subsystems.Arm;
 import org.usfirst.frc.team2374.robot.subsystems.Drivetrain;
 
@@ -39,7 +40,7 @@ public class Robot extends IterativeRobot {
 		catapult = new Catapult();
 		arm = new Arm();
 		oi = new OI();
-		// chooser.addDefault("Default Auto", new ExampleCommand());
+		chooser.addDefault("Default Auto", new TimedAuto(3));
 		// chooser.addObject("My Auto", new MyAutoCommand());
 		SmartDashboard.putData("Auto mode", chooser);
 	}
