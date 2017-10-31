@@ -21,7 +21,7 @@ import org.usfirst.frc.team2374.robot.subsystems.Drivetrain;
  * directory.
  */
 public class Robot extends IterativeRobot {
-
+ 
 	public static Drivetrain drive;
 	public static Catapult catapult;
 	public static Arm arm;
