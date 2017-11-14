@@ -47,13 +47,13 @@ public class Arm extends Subsystem {
 	// The motors may need to spin in opposite directions ask mechanical later
 	public void motorsForward() {
 		talon1.setSpeed(MOTOR_SPEED);
-		talon2.setSpeed(MOTOR_SPEED);
+		talon2.setSpeed(-MOTOR_SPEED);
 	}
 	
 	// The motors may need to spin in opposite directions ask mechanical later
 	public void motorsBackwards() {
 		talon1.setSpeed(-MOTOR_SPEED);
-		talon2.setSpeed(-MOTOR_SPEED);
+		talon2.setSpeed(MOTOR_SPEED);
 	}
 	
 	public void motorsStop() {
