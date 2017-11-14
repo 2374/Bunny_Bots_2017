@@ -34,7 +34,7 @@ public class Arm extends Subsystem {
 		solenoid1.set(Value.kForward);
 		solenoid2.set(Value.kForward);
 	}
-	
+	 
 	public void pistonsStop() {
 		solenoid1.set(Value.kReverse);
 		solenoid2.set(Value.kReverse);
