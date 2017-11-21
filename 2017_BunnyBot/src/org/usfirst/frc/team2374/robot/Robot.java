@@ -1,4 +1,3 @@
-
 package org.usfirst.frc.team2374.robot;
 
 import edu.wpi.first.wpilibj.IterativeRobot;
@@ -51,14 +50,10 @@ public class Robot extends IterativeRobot {
 	 * the robot is disabled.
 	 */
 	@Override
-	public void disabledInit() {
-
-	}
+	public void disabledInit() { }
 
 	@Override
-	public void disabledPeriodic() {
-		Scheduler.getInstance().run();
-	}
+	public void disabledPeriodic() { Scheduler.getInstance().run(); }
 
 	/**
 	 * This autonomous (along with the chooser code above) shows how to select
@@ -74,14 +69,12 @@ public class Robot extends IterativeRobot {
 	@Override
 	public void autonomousInit() {
 		autonomousCommand = chooser.getSelected();
-
 		/*
 		 * String autoSelected = SmartDashboard.getString("Auto Selector",
 		 * "Default"); switch(autoSelected) { case "My Auto": autonomousCommand
 		 * = new MyAutoCommand(); break; case "Default Auto": default:
 		 * autonomousCommand = new ExampleCommand(); break; }
 		 */
-
 		// schedule the autonomous command (example)
 		if (autonomousCommand != null)
 			autonomousCommand.start();
@@ -91,9 +84,7 @@ public class Robot extends IterativeRobot {
 	 * This function is called periodically during autonomous
 	 */
 	@Override
-	public void autonomousPeriodic() {
-		Scheduler.getInstance().run();
-	}
+	public void autonomousPeriodic() { Scheduler.getInstance().run(); }
 
 	@Override
 	public void teleopInit() {
@@ -109,16 +100,13 @@ public class Robot extends IterativeRobot {
 	 * This function is called periodically during operator control
 	 */
 	@Override
-	public void teleopPeriodic() {
-		Scheduler.getInstance().run();
-	}
+	public void teleopPeriodic() { Scheduler.getInstance().run(); }
 
 	/**
 	 * This function is called periodically during test mode
 	 */
 	@Override
-	public void testPeriodic() {
-		LiveWindow.run();
-	}
+	public void testPeriodic() { LiveWindow.run(); }
+	
 }
 
