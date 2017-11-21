@@ -7,9 +7,10 @@ package org.usfirst.frc.team2374.robot;
  * floating around.
  */
 public class RobotMap {
-
+	// joystick ports
 	public static int driverJoy = 0;
 	
+	// joystick buttons
 	public static int rsLeftAxisY = 1;
 	public static int rsRightAxisY = 5;
 	public static int rsLeftTrigger = 2;
@@ -21,6 +22,7 @@ public class RobotMap {
 	public static int rsButtonY = 4;
 	public static int rsButtonB = 2;
 	
+	// robot ports
 	public static final int TALON_LEFT_1 = 1; // front left mCIM
 	public static final int TALON_LEFT_2 = 2; // back left mCIM
 	public static final int TALON_LEFT_MASTER_1 = 3; // front left CIM
@@ -30,10 +32,9 @@ public class RobotMap {
 	public static final int TALON_RIGHT_MASTER_1 = 7; // front right CIM
 	public static final int TALON_RIGHT_MASTER_2 = 8; // back right CIM
 	
-
-	public static final int CATAPULT_TALON_1 = 11;
-	public static final int CATAPULT_SOLENOID_2 = 12;
-	public static final int CATAPULT_SOLENOID_3 = 13;
+	public static final int TALON_CATAPULT_1 = 11;
+	public static final int SOLENOID_CATAPULT_1 = 12;
+	public static final int SOLENOID_CATAPULT_2 = 13;
 
 	public static final int TALON_ARM_1 = 9; // first motor for the arm
 	public static final int TALON_ARM_2 = 10; // second motor for the arm

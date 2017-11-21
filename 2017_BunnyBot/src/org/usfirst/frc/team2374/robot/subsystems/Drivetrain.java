@@ -2,7 +2,6 @@ package org.usfirst.frc.team2374.robot.subsystems;
 
 import org.usfirst.frc.team2374.robot.RobotMap;
 import org.usfirst.frc.team2374.robot.commands.DrivetrainTeleop;
-
 import edu.wpi.first.wpilibj.RobotDrive;
 import edu.wpi.first.wpilibj.Talon;
 import edu.wpi.first.wpilibj.command.Subsystem;
@@ -22,7 +21,6 @@ public class Drivetrain extends Subsystem {
 		right2 = new Talon(RobotMap.TALON_RIGHT_2);
 		masterRight1 = new Talon(RobotMap.TALON_RIGHT_MASTER_2);
 		masterRight2 = new Talon(RobotMap.TALON_RIGHT_MASTER_2);
-		
 		// robot drive is given CIMs as parameters
 		robotDrive = new RobotDrive(masterLeft1, masterLeft2, masterRight1, masterRight2);
 		robotDrive.setSafetyEnabled(false);
@@ -31,9 +29,7 @@ public class Drivetrain extends Subsystem {
 	// setDefaultCommand(new CommandName()) takes a command as an input and sets the default
 	// command for this subsystem, usually the teleop command that corresponds to this subsystem
 	@Override
-	protected void initDefaultCommand() {
-		setDefaultCommand(new DrivetrainTeleop());
-	}
+	protected void initDefaultCommand() { setDefaultCommand(new DrivetrainTeleop()); }
 	
 	public void tankDrive(double left, double right) {
 		// uses tank drive method in robot drive to set the speed of the CIMs and then mCIMS are set to their
