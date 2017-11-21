@@ -1,9 +1,7 @@
 package org.usfirst.frc.team2374.robot;
 
-
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.buttons.JoystickButton;
-
 
 /**
  * This class is the glue that binds the controls on the physical operator
@@ -28,45 +26,25 @@ public class OI {
 		buttonB = new JoystickButton(driver, RobotMap.rsButtonB);
 	}
 
-	public double getDriverLeftY() {
-		return driver.getRawAxis(RobotMap.rsLeftAxisY);
-	}
+	public double getDriverLeftY() { return driver.getRawAxis(RobotMap.rsLeftAxisY); }
 
-	public double getDriverRightY() {
-		return driver.getRawAxis(RobotMap.rsRightAxisY);
-	}
+	public double getDriverRightY() { return driver.getRawAxis(RobotMap.rsRightAxisY); }
 
-	public double getLeftTrigger() {
-		return quadraticScale(driver.getRawAxis(RobotMap.rsLeftTrigger));
-	}
+	public double getLeftTrigger() { return quadraticScale(driver.getRawAxis(RobotMap.rsLeftTrigger)); }
 
-	public double getRightTrigger() {
-		return quadraticScale(driver.getRawAxis(RobotMap.rsRightTrigger));
-	}
+	public double getRightTrigger() { return quadraticScale(driver.getRawAxis(RobotMap.rsRightTrigger)); }
 
-	public boolean getButtonX() {
-		return driver.getRawButton(RobotMap.rsButtonX);
-	}
+	public boolean getButtonX() { return driver.getRawButton(RobotMap.rsButtonX); }
 
-	public boolean getButtonA() {
-		return driver.getRawButton(RobotMap.rsButtonA);
-	}
+	public boolean getButtonA() { return driver.getRawButton(RobotMap.rsButtonA); }
 
-	public boolean getButtonY() {
-		return driver.getRawButton(RobotMap.rsButtonY);
-	}
+	public boolean getButtonY() { return driver.getRawButton(RobotMap.rsButtonY); }
 	
-	public boolean getButtonB() {
-		return driver.getRawButton(RobotMap.rsButtonB);
-	}
+	public boolean getButtonB() { return driver.getRawButton(RobotMap.rsButtonB); }
 
-	public boolean getLeftBumper() {
-		return leftBumper.get();
-	}
+	public boolean getLeftBumper() { return leftBumper.get(); }
 
-	public boolean getRightBumper() {
-		return rightBumper.get();
-	}
+	public boolean getRightBumper() { return rightBumper.get(); }
 
 	public double deadZone(double axisValue, double deadValue) {
 		if (Math.abs(axisValue) < deadValue)
@@ -75,12 +53,9 @@ public class OI {
 			return axisValue;
 	}
 
-	public double quadraticScale(double value) {
-		return value * Math.abs(value);
-	}
+	public double quadraticScale(double value) { return value * Math.abs(value); }
 
-	public void toSmartDashboard() {
-	}
+	public void toSmartDashboard() { }
 
 }
 
