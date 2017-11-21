@@ -12,23 +12,12 @@ public class OI {
 	Joystick driver2;
 	JoystickButton leftBumper;
 	JoystickButton rightBumper;
-	JoystickButton buttonX;
-	JoystickButton buttonA;
-	JoystickButton buttonY;
-	JoystickButton buttonB;
-	JoystickButton buttonA2;
-	JoystickButton buttonB2;
-	JoystickButton buttonY2;
 
 	public OI() {
 		driver = new Joystick(RobotMap.driverJoy);
 		driver2 = new Joystick(RobotMap.driverJoy2);
 		leftBumper = new JoystickButton(driver, RobotMap.rsLeftBumper);
 		rightBumper = new JoystickButton(driver, RobotMap.rsRightBumper);
-		buttonX = new JoystickButton(driver, RobotMap.rsButtonX);
-		buttonA = new JoystickButton(driver, RobotMap.rsButtonA);
-		buttonY = new JoystickButton(driver, RobotMap.rsButtonY);
-		buttonB = new JoystickButton(driver, RobotMap.rsButtonB);
 	}
 
 	public double getDriverLeftY() { return driver.getRawAxis(RobotMap.rsLeftAxisY); }
