@@ -11,13 +11,13 @@ public class CatapultTeleop extends Command{
 	
 	@Override
 	protected void execute() {
-		if (Robot.oi.getButtonA())
+		if (Robot.oi.getButtonA2())
 			Robot.catapult.motorsForward();
-		else if (Robot.oi.getButtonB())
+		else if (Robot.oi.getButtonB2())
 			Robot.catapult.motorsBackward();
 		else
 			Robot.catapult.motorsStop();
-		if (Robot.oi.getButtonY())
+		if (Robot.oi.getButtonY2())
 			Robot.catapult.pistonStart();
 		else
 			Robot.catapult.pistonStop();

@@ -9,6 +9,7 @@ package org.usfirst.frc.team2374.robot;
 public class RobotMap {
 	// joystick ports
 	public static int driverJoy = 0;
+	public static int driverJoy2 = 1;
 	
 	// joystick buttons
 	public static int rsLeftAxisY = 1;

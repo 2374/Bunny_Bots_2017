@@ -9,15 +9,20 @@ import edu.wpi.first.wpilibj.buttons.JoystickButton;
  */
 public class OI {
 	Joystick driver;
+	Joystick driver2;
 	JoystickButton leftBumper;
 	JoystickButton rightBumper;
 	JoystickButton buttonX;
 	JoystickButton buttonA;
 	JoystickButton buttonY;
 	JoystickButton buttonB;
+	JoystickButton buttonA2;
+	JoystickButton buttonB2;
+	JoystickButton buttonY2;
 
 	public OI() {
 		driver = new Joystick(RobotMap.driverJoy);
+		driver2 = new Joystick(RobotMap.driverJoy2);
 		leftBumper = new JoystickButton(driver, RobotMap.rsLeftBumper);
 		rightBumper = new JoystickButton(driver, RobotMap.rsRightBumper);
 		buttonX = new JoystickButton(driver, RobotMap.rsButtonX);
@@ -45,6 +50,12 @@ public class OI {
 	public boolean getLeftBumper() { return leftBumper.get(); }
 
 	public boolean getRightBumper() { return rightBumper.get(); }
+	
+	public boolean getButtonA2() { return driver2.getRawButton(RobotMap.rsButtonA); }
+	
+	public boolean getButtonB2() { return driver2.getRawButton(RobotMap.rsButtonB); }
+	
+	public boolean getButtonY2() { return driver2.getRawButton(RobotMap.rsButtonY); }
 
 	public double deadZone(double axisValue, double deadValue) {
 		if (Math.abs(axisValue) < deadValue)
