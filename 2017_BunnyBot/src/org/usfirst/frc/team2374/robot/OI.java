@@ -1,7 +1,6 @@
 package org.usfirst.frc.team2374.robot;
 
 import edu.wpi.first.wpilibj.Joystick;
-import edu.wpi.first.wpilibj.buttons.JoystickButton;
 
 /**
  * This class is the glue that binds the controls on the physical operator
@@ -10,14 +9,10 @@ import edu.wpi.first.wpilibj.buttons.JoystickButton;
 public class OI {
 	Joystick driver;
 	Joystick driver2;
-	JoystickButton leftBumper;
-	JoystickButton rightBumper;
 
 	public OI() {
 		driver = new Joystick(RobotMap.driverJoy);
 		driver2 = new Joystick(RobotMap.driverJoy2);
-		leftBumper = new JoystickButton(driver, RobotMap.rsLeftBumper);
-		rightBumper = new JoystickButton(driver, RobotMap.rsRightBumper);
 	}
 
 	public double getDriverLeftY() { return driver.getRawAxis(RobotMap.rsLeftAxisY); }
@@ -36,9 +31,9 @@ public class OI {
 	
 	public boolean getButtonB() { return driver.getRawButton(RobotMap.rsButtonB); }
 
-	public boolean getLeftBumper() { return leftBumper.get(); }
+	public boolean getLeftBumper() { return driver.getRawButton(RobotMap.rsLeftBumper); }
 
-	public boolean getRightBumper() { return rightBumper.get(); }
+	public boolean getRightBumper() { return driver.getRawButton(RobotMap.rsRightBumper); }
 	
 	public boolean getButtonA2() { return driver2.getRawButton(RobotMap.rsButtonA); }
 	
