@@ -19,9 +19,9 @@ public class OI {
 
 	public double getDriverRightY() { return driver.getRawAxis(RobotMap.rsRightAxisY); }
 
-	public double getLeftTrigger() { return quadraticScale(driver.getRawAxis(RobotMap.rsLeftTrigger)); }
+	public double getLeftTrigger() { return driver.getRawAxis(RobotMap.rsLeftTrigger); }
 
-	public double getRightTrigger() { return quadraticScale(driver.getRawAxis(RobotMap.rsRightTrigger)); }
+	public double getRightTrigger() { return driver.getRawAxis(RobotMap.rsRightTrigger); }
 
 	public boolean getButtonX() { return driver.getRawButton(RobotMap.rsButtonX); }
 
@@ -40,15 +40,6 @@ public class OI {
 	public boolean getButtonB2() { return driver2.getRawButton(RobotMap.rsButtonB); }
 	
 	public boolean getButtonY2() { return driver2.getRawButton(RobotMap.rsButtonY); }
-
-	public double deadZone(double axisValue, double deadValue) {
-		if (Math.abs(axisValue) < deadValue)
-			return 0;
-		else
-			return axisValue;
-	}
-
-	public double quadraticScale(double value) { return value * Math.abs(value); }
 
 	public void toSmartDashboard() { }
 
