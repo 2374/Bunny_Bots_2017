@@ -24,24 +24,24 @@ public class RobotMap {
 	public static int rsButtonB = 2;
 	
 	// robot ports
-	public static final int TALON_LEFT_1 = 1; // front left mCIM
-	public static final int TALON_LEFT_2 = 2; // back left mCIM
-	public static final int TALON_LEFT_MASTER_1 = 3; // front left CIM
-	public static final int TALON_LEFT_MASTER_2 = 4; // back left CIM
-	public static final int TALON_RIGHT_1 = 5; // front right mCIM
-	public static final int TALON_RIGHT_2 = 6; //back right mCIM
-	public static final int TALON_RIGHT_MASTER_1 = 7; // front right CIM
-	public static final int TALON_RIGHT_MASTER_2 = 8; // back right CIM
+	public static final int TALON_LEFT_1 = 4; // front left mCIM
+	public static final int TALON_LEFT_2 = 1; // back left mCIM
+	public static final int TALON_LEFT_MASTER_1 = 2; // front left CIM
+	public static final int TALON_LEFT_MASTER_2 = 3; // back left CIM
+	public static final int TALON_RIGHT_1 = 0; // front right mCIM
+	public static final int TALON_RIGHT_2 = 5; // back right mCIM
+	public static final int TALON_RIGHT_MASTER_1 = 6; // front right CIM
+	public static final int TALON_RIGHT_MASTER_2 = 7; // back right CIM
 	
-	public static final int TALON_CATAPULT_1 = 11;
-	public static final int SOLENOID_CATAPULT_1 = 12;
-	public static final int SOLENOID_CATAPULT_2 = 13;
+	public static final int TALON_CATAPULT_1 = 0;
+	public static final int SOLENOID_CATAPULT_1 = 0;
+	public static final int SOLENOID_CATAPULT_2 = 1;
 
-	public static final int TALON_ARM_1 = 9; // first motor for the arm
-	public static final int TALON_ARM_2 = 10; // second motor for the arm
-	public static final int SOLENOID_ARM_1 = 14; // first solenoid for the arm
-	public static final int SOLENOID_ARM_2 = 15; // second solenoid for the arm
-	public static final int SOLENOID_ARM_3 = 16; // third solenoid for the arm
-	public static final int SOLENOID_ARM_4 = 17; // fourth solenoid for the arm
+	public static final int TALON_ARM_1 = 8; // first motor for the arm
+	public static final int TALON_ARM_2 = 9; // second motor for the arm
+	public static final int SOLENOID_ARM_1 = 2; // first solenoid for the arm
+	public static final int SOLENOID_ARM_2 = 3; // second solenoid for the arm
+	public static final int SOLENOID_ARM_3 = 4; // third solenoid for the arm
+	public static final int SOLENOID_ARM_4 = 5; // fourth solenoid for the arm
 
 }

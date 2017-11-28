@@ -5,7 +5,7 @@ import edu.wpi.first.wpilibj.command.Command;
 
 public class CatapultTeleop extends Command{
 	
-	public CatapultTeleop(){ requires (Robot.catapult); }
+	public CatapultTeleop(){ requires(Robot.catapult); }
 	@Override
 	protected void initialize() { }
 	
