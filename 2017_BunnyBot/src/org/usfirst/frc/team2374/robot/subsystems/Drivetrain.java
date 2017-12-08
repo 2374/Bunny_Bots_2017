@@ -24,6 +24,14 @@ public class Drivetrain extends Subsystem {
 		// robot drive is given CIMs as parameters
 		robotDrive = new RobotDrive(masterLeft1, masterLeft2, masterRight1, masterRight2);
 		robotDrive.setSafetyEnabled(false);
+		left1.setInverted(true);
+		masterLeft1.setInverted(true);
+		left2.setInverted(true);
+		masterLeft2.setInverted(true);
+		right1.setInverted(true);
+		masterRight1.setInverted(true);
+		right2.setInverted(true);
+		masterRight2.setInverted(true);
 	}
 
 	// setDefaultCommand(new CommandName()) takes a command as an input and sets the default
@@ -34,11 +42,11 @@ public class Drivetrain extends Subsystem {
 	public void tankDrive(double left, double right) {
 		// uses tank drive method in robot drive to set the speed of the CIMs and then mCIMS are set to their
 		// corresponding CIM (this needs to be tested, if it doesn't work we may have to write our own tankDrive method)
-		robotDrive.tankDrive(-left, -right);
-		left1.setSpeed(-masterLeft1.getSpeed());
-		left2.setSpeed(-masterLeft2.getSpeed());
-		right1.setSpeed(-masterRight1.getSpeed());
-		right2.setSpeed(-masterRight2.getSpeed());
+		robotDrive.tankDrive(left, right);
+		left1.setSpeed(masterLeft1.getSpeed());
+		left2.setSpeed(masterLeft2.getSpeed());
+		right1.setSpeed(masterRight1.getSpeed());
+		right2.setSpeed(masterRight2.getSpeed());
 	}
 
 }

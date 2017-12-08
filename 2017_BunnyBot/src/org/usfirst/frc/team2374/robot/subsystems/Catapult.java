@@ -18,7 +18,7 @@ public class Catapult extends Subsystem {
 	
 	public Catapult() {
 		// if this doesn't work find a way to get pwm ports from navx
-		catapult1 = new Talon(RobotMap.TALON_CATAPULT_1 + 11);
+		catapult1 = new Talon(RobotMap.TALON_CATAPULT_1 + 10);
 		solenoid = new DoubleSolenoid(RobotMap.SOLENOID_CATAPULT_1, RobotMap.SOLENOID_CATAPULT_2);
 	}
 	
