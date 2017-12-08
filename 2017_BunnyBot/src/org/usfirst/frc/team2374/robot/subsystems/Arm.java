@@ -18,7 +18,7 @@ public class Arm extends Subsystem {
 	private static final double MOTOR_SPEED = 1.0;
 	
 	public Arm () {
-		talon1 = new Talon(RobotMap.TALON_ARM_1);
+		talon1 = new Talon(RobotMap.TALON_ARM_1); 
 		talon2 = new Talon(RobotMap.TALON_ARM_2);
 		airCompressor = new Compressor();
         airCompressor.start();
