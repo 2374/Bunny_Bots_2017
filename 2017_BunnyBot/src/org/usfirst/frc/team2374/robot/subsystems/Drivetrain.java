@@ -19,7 +19,7 @@ public class Drivetrain extends Subsystem {
 		masterLeft2 = new Talon(RobotMap.TALON_LEFT_MASTER_2);
 		right1 = new Talon(RobotMap.TALON_RIGHT_1);
 		right2 = new Talon(RobotMap.TALON_RIGHT_2);
-		masterRight1 = new Talon(RobotMap.TALON_RIGHT_MASTER_2);
+		masterRight1 = new Talon(RobotMap.TALON_RIGHT_MASTER_1);
 		masterRight2 = new Talon(RobotMap.TALON_RIGHT_MASTER_2);
 		// robot drive is given CIMs as parameters
 		robotDrive = new RobotDrive(masterLeft1, masterLeft2, masterRight1, masterRight2);
@@ -34,11 +34,11 @@ public class Drivetrain extends Subsystem {
 	public void tankDrive(double left, double right) {
 		// uses tank drive method in robot drive to set the speed of the CIMs and then mCIMS are set to their
 		// corresponding CIM (this needs to be tested, if it doesn't work we may have to write our own tankDrive method)
-		robotDrive.tankDrive(left, right);
-		left1.setSpeed(masterLeft1.getSpeed());
-		left2.setSpeed(masterLeft2.getSpeed());
-		right1.setSpeed(masterRight1.getSpeed());
-		right2.setSpeed(masterRight2.getSpeed());
+		robotDrive.tankDrive(-left, -right);
+		left1.setSpeed(-masterLeft1.getSpeed());
+		left2.setSpeed(-masterLeft2.getSpeed());
+		right1.setSpeed(-masterRight1.getSpeed());
+		right2.setSpeed(-masterRight2.getSpeed());
 	}
 
 }

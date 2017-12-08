@@ -2,6 +2,8 @@ package org.usfirst.frc.team2374.robot.subsystems;
 
 import org.usfirst.frc.team2374.robot.RobotMap;
 import org.usfirst.frc.team2374.robot.commands.ArmTeleop;
+
+import edu.wpi.first.wpilibj.Compressor;
 import edu.wpi.first.wpilibj.DoubleSolenoid;
 import edu.wpi.first.wpilibj.DoubleSolenoid.Value;
 import edu.wpi.first.wpilibj.Talon;
@@ -11,12 +13,15 @@ public class Arm extends Subsystem {
 	
 	private Talon talon1, talon2;
 	private DoubleSolenoid solenoid1, solenoid2;
+	private Compressor airCompressor;
 	
 	private static final double MOTOR_SPEED = 1.0;
 	
 	public Arm () {
 		talon1 = new Talon(RobotMap.TALON_ARM_1);
 		talon2 = new Talon(RobotMap.TALON_ARM_2);
+		airCompressor = new Compressor();
+        airCompressor.start();
 		solenoid1 = new DoubleSolenoid(RobotMap.SOLENOID_ARM_1, RobotMap.SOLENOID_ARM_2);
 		solenoid2 = new DoubleSolenoid(RobotMap.SOLENOID_ARM_3, RobotMap.SOLENOID_ARM_4);	
 	}
@@ -26,12 +31,12 @@ public class Arm extends Subsystem {
 	
 	// moves the pistons in the arm
 	public void pistonsStart() {
-		solenoid1.set(Value.kForward);
+		solenoid1.set(Value.kReverse);
 		solenoid2.set(Value.kForward);
 	}
 	 
 	public void pistonsStop() {
-		solenoid1.set(Value.kReverse);
+		solenoid1.set(Value.kForward);
 		solenoid2.set(Value.kReverse);
 	}
 	

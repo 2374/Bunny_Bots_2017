@@ -35,11 +35,11 @@ public class OI {
 
 	public boolean getRightBumper() { return driver.getRawButton(RobotMap.rsRightBumper); }
 	
-	public boolean getButtonA2() { return driver2.getRawButton(RobotMap.rsButtonA); }
+	public boolean getButton1() { return driver2.getRawButton(RobotMap.rsButtonA); }
 	
-	public boolean getButtonB2() { return driver2.getRawButton(RobotMap.rsButtonB); }
+	public boolean getButton2() { return driver2.getRawButton(RobotMap.rsButtonB); }
 	
-	public boolean getButtonY2() { return driver2.getRawButton(RobotMap.rsButtonY); }
+	public boolean getButton4() { return driver2.getRawButton(RobotMap.rsButtonY); }
 
 	public void toSmartDashboard() { }
 

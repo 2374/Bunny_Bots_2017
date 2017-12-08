@@ -2,10 +2,12 @@ package org.usfirst.frc.team2374.robot.subsystems;
 
 import org.usfirst.frc.team2374.robot.RobotMap;
 import org.usfirst.frc.team2374.robot.commands.CatapultTeleop;
+
 import edu.wpi.first.wpilibj.DoubleSolenoid;
 import edu.wpi.first.wpilibj.DoubleSolenoid.Value;
 import edu.wpi.first.wpilibj.Talon;
 import edu.wpi.first.wpilibj.command.Subsystem;
+import edu.wpi.first.wpilibj.DigitalInput;
  
 public class Catapult extends Subsystem {
 	
@@ -15,7 +17,8 @@ public class Catapult extends Subsystem {
 	private static final double MOTOR_SPEED = 1.0;
 	
 	public Catapult() {
-		catapult1 = new Talon(RobotMap.TALON_CATAPULT_1);
+		// if this doesn't work find a way to get pwm ports from navx
+		catapult1 = new Talon(RobotMap.TALON_CATAPULT_1 + 11);
 		solenoid = new DoubleSolenoid(RobotMap.SOLENOID_CATAPULT_1, RobotMap.SOLENOID_CATAPULT_2);
 	}
 	
