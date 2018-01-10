@@ -1,7 +1,7 @@
 package org.usfirst.frc.team2374.robot.subsystems;
 
-import org.usfirst.frc.team2374.robot.RobotMap;
 import org.usfirst.frc.team2374.robot.commands.DrivetrainTeleop;
+
 import edu.wpi.first.wpilibj.RobotDrive;
 import edu.wpi.first.wpilibj.Talon;
 import edu.wpi.first.wpilibj.command.Subsystem;
@@ -13,14 +13,14 @@ public class Drivetrain extends Subsystem {
 	private Talon left1, left2, masterLeft1, masterLeft2, right1, right2, masterRight1, masterRight2;
 	
 	public Drivetrain() {
-		left1 = new Talon(RobotMap.TALON_LEFT_1);
-		left2 = new Talon(RobotMap.TALON_LEFT_2);
-		masterLeft1 = new Talon(RobotMap.TALON_LEFT_MASTER_1);
-		masterLeft2 = new Talon(RobotMap.TALON_LEFT_MASTER_2);
-		right1 = new Talon(RobotMap.TALON_RIGHT_1);
-		right2 = new Talon(RobotMap.TALON_RIGHT_2);
-		masterRight1 = new Talon(RobotMap.TALON_RIGHT_MASTER_1);
-		masterRight2 = new Talon(RobotMap.TALON_RIGHT_MASTER_2);
+		//left1 = new Talon(RobotMap.TALON_LEFT_1);
+		//left2 = new Talon(RobotMap.TALON_LEFT_2);
+		//masterLeft1 = new Talon(RobotMap.TALON_LEFT_MASTER_1);
+		//masterLeft2 = new Talon(RobotMap.TALON_LEFT_MASTER_2);
+		//right1 = new Talon(RobotMap.TALON_RIGHT_1);
+		//right2 = new Talon(RobotMap.TALON_RIGHT_2);
+		//masterRight1 = new Talon(RobotMap.TALON_RIGHT_MASTER_1);
+		//masterRight2 = new Talon(RobotMap.TALON_RIGHT_MASTER_2);
 		// robot drive is given CIMs as parameters
 		robotDrive = new RobotDrive(masterLeft1, masterLeft2, masterRight1, masterRight2);
 		robotDrive.setSafetyEnabled(false);
